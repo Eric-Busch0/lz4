@@ -14,7 +14,7 @@ target_include_directories(lz4_static PUBLIC
 )
 
 # --- CLI Executable ---
-add_executable(lz4cli
+add_executable(lz4sai
     programs/bench.c    
     programs/lz4cli.c     
     programs/threadpool.c   
@@ -25,13 +25,13 @@ add_executable(lz4cli
 )
     
 
-target_include_directories(lz4cli PRIVATE
+target_include_directories(lz4sai PRIVATE
     ${CMAKE_CURRENT_SOURCE_DIR}/lib
     ${CMAKE_CURRENT_SOURCE_DIR}/programs
 )
 
-target_link_libraries(lz4cli PRIVATE lz4_static)
+target_link_libraries(lz4sai PRIVATE lz4_static)
 
 
-install(TARGETS lz4-sai
+install(TARGETS lz4sai
         RUNTIME DESTINATION bin)
