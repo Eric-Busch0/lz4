@@ -33,5 +33,5 @@ target_include_directories(lz4cli PRIVATE
 target_link_libraries(lz4cli PRIVATE lz4_static)
 
 
-install(TARGETS lz4cli
+install(TARGETS lz4-sai
         RUNTIME DESTINATION bin)
